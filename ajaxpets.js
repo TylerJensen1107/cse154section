@@ -7,4 +7,7 @@ window.onload = function() {
 
 function showInfo() {
 	console.log(this);
+
+	var picturesDiv = document.getElementById("pictures");
+	picturesDiv.innerHTML = this.responseText;
 }
