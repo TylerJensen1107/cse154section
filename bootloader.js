@@ -1,9 +1,12 @@
 window.onload = function() {
+	document.getElementById("load").onclick = ajaxRequest;
+}
+
+function ajaxRequest() {
 	var ajax = new XMLHttpRequest();
 	ajax.onload = loadBoot;
 	ajax.open("GET", "https://webster.cs.washington.edu/cse154/sections/9/bootloader/loader.php", true);
 	ajax.send();
-
 }
 	
 function loadBoot() {
@@ -13,8 +16,7 @@ function loadBoot() {
     imgTag.src = this.responseText;
     document.getElementById("boot").appendChild(imgTag);
   } else {
-  	console.log(this);
-    console.log("error");
+  	alert(this.statusText);
   }
 }	
 	
