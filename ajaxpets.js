@@ -12,7 +12,7 @@ function updatePictures() {
   }
   var ajax = new XMLHttpRequest();
   ajax.onload = displayPictures;
-  ajax.open("GET", "https://webster.cs.washington.edu/cse154/sections/9/pets/ajaxpets.php" + animal, true);
+  ajax.open("GET", "https://webster.cs.washington.edu/cse154/sections/9/pets/ajaxpets.php?animal=" + animal, true);
   ajax.send();
 }
 
