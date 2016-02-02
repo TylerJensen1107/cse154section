@@ -9,6 +9,9 @@ window.onload = function() {
 function loadBoot() {
   if (this.status == 200) {   // request succeeded
     console.log(this.responseText);
+    var imgTag = document.createElement("img");
+    imgTag.src = this.responseText;
+    document.getElementById("boot").appendChild(imgTag);
   } else {
   	console.log(this);
     console.log("error");
