@@ -38,7 +38,7 @@ function onAddressLoaded() {
 	var json = JSON.parse(this.responseText);
 
 	var address = document.createElement("p");
-	p.innerHTML = json.address;
+	address.innerHTML = json.address;
 	console.log(json);
 
 	document.getElementById("addressDisplay").appendChild(address);
