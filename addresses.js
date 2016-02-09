@@ -1,5 +1,6 @@
 window.onload = function() {
 	var optionsList = document.getElementById("allnames");
+	document.getElementById("add").onclick = postAddress;
 
 	optionsList.onchange = loadAddress;
 
@@ -7,6 +8,25 @@ window.onload = function() {
 	ajax.onload = loadList;
 	ajax.open("GET", "https://webster.cs.washington.edu/cse154/sections/10/addressbook/addressbook.php", true);
 	ajax.send();
+}
+
+function postAddress() {
+	var name = document.getElementById("name").value;
+	var address = document.getElementById("address").value;
+
+	var data = new FormData();
+	data.append("name", name);
+	data.append("address", address);
+
+	var ajax = new XMLHttpRequest();
+	ajax.onload = addressCreated;
+	ajax.open("POST", "https://webster.cs.washington.edu/cse154/sections/10/addressbook/addressbook.php", true);
+	ajax.send(data);
+
+}
+
+function addressCreated() {
+	console.log(JSON.parse((this.responseText)));
 }
 
 function loadList() {
