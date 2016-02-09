@@ -41,7 +41,7 @@ function onAddressLoaded() {
 	address.innerHTML = json.address;
 	console.log(json);
 
-	document.getElementById("addressDisplay").appendChild(address);
+	document.getElementById("addressdisplay").appendChild(address);
 
 
 
