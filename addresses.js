@@ -26,7 +26,7 @@ function postAddress() {
 }
 
 function addressCreated() {
-	console.log(JSON.parse((this.responseText)));
+	//console.log((this.responseText));
 }
 
 function loadList() {
