@@ -12,6 +12,13 @@ function loadList() {
 	console.log(json);
 
 	for(var i = 0; i < json.names.length; i++) {
-		console.log(json.names[i]);
+		addName(json.names[i]);
 	}
+}
+
+function addName(name) {
+	var option = document.createElement("option");
+	option.innerHTML = name;
+	option.value = name;
+	document.getElementById("allnames").appendChild(option);
 }
