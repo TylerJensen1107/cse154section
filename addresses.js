@@ -3,7 +3,7 @@ window.onload = function() {
 
 	var ajax = new XMLHttpRequest();
 	ajax.onload = loadList;
-	ajax.open("GET", "addressbook.php", true);
+	ajax.open("GET", "https://webster.cs.washington.edu/cse154/sections/10/addressbook/addressbook.php", true);
 	ajax.send();
 }
 
