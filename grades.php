@@ -15,9 +15,14 @@
 			<?php $filename = strtolower($student) . ".txt";
 			if(file_exists($filename)) { 
 				$fileContents = file_get_contents($filename);
+				$fileContentsArray = explode(" ", $fileContents);
+				$totalScore = 0;
+				foreach ($fileContentsArray as $score) {
+				$totalScore += $score;
 				?>
-				<li><?= $fileContents ?></li>
-				<li>TOTAL: 0</li>
+					<li><?= $score ?></li>
+				<?php } ?>
+				<li>TOTAL: <?= $totalScore ?></li>
 			<?php } ?>
 		</ul>
 	</body>
