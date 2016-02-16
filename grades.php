@@ -1,3 +1,8 @@
+<?php if(isset($_GET["student"])) {
+	$student = $_GET["student"];
+} ?>
+
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -5,7 +10,7 @@
 	</head>
 
 	<body>
-		<h1>Grades for ???</h1>
+		<h1>Grades for <?= $student ?></h1>
 		<ul>
 			<li>0 points</li>
 			<li>TOTAL: 0</li>
