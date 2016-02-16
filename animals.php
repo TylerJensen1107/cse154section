@@ -6,9 +6,12 @@
 	<?php  if(isset($_GET["animal"])) {
 			$animal = $_GET["animal"];
 
-	}?>
+	}
+		$files = glob("images/{$animal}*.jpeg");
 
-	<p><?= $animal?></p>
+	?>
+
+	<p><?= count($files)?></p>
 
 </body>
 </html>
