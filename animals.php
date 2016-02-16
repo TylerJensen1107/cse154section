@@ -9,9 +9,12 @@
 	}
 		$files = glob("images/{$animal}*.jpeg");
 
+		foreach ($files as $file) { ?>
+				<p><?= $file ?></p>
+		<?php }
+
 	?>
 
-	<p><?= count($files)?></p>
 
 </body>
 </html>
