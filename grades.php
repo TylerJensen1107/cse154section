@@ -12,9 +12,11 @@
 	<body>
 		<h1>Grades for <?= $student ?></h1>
 		<ul>
-			<?php $filename = $student . ".txt";
-			if(file_exists($filename)) { ?>
-				<li>0 points</li>
+			<?php $filename = strtolower($student) . ".txt";
+			if(file_exists($filename)) { 
+				$fileContents = file_get_contents($filename);
+				?>
+				<li><?= $fileContents ?></li>
 				<li>TOTAL: 0</li>
 			<?php } ?>
 		</ul>
