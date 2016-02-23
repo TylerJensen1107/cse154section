@@ -10,13 +10,13 @@
     <div>
       
       <?php
-		$folder = "https://webster.cs.washington.edu/staff/tylerj11/cs154/cse154section/images";
+		$folder = "images";
 
 		$images = glob("$folder/*.jpg");
 
 		foreach ($images as $path) {
-			print $path;
-		}
+			?><img src="<?= $path ?>"  alt="some picture" />  
+		<?php }
 
 
 	?>
