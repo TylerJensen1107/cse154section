@@ -1,0 +1,90 @@
+/* Style shared in both */
+body {
+	background: lightgray;
+}
+
+/* Styles for input page */
+#form {
+	font: 12pt "Lucida Grande", Arial, sans-serif;
+}
+
+#form h1{
+	text-align: center;
+}
+
+#form form {
+	width: 400px;
+	margin: 0 auto;
+}
+
+dt {
+	float: left;
+	clear: left;
+	width: 6em;
+}
+
+.topline {
+	line-height: 2.5em;
+}
+
+.bottomline {
+	line-height: 2.5em;
+}
+
+dd.topline input[type="text"] {
+	font-size: 16pt;
+	width: 300px;
+}
+
+dd.bottomline input[type="text"] {
+	font-size: 16pt;
+	width: 300px;
+}
+
+/* Output meme page */
+#meme {
+	/* Center the image in the page */
+	position: relative;
+	margin: 0 auto;
+	width: 450px;
+}
+
+#meme img {
+	/* Make sure everything fits in the meme div */
+	width: 100%;
+}
+
+#toptext, #bottomtext {
+	/* Text styles */
+	color: white;
+	font-family: "Impact", sans-serif;
+	font-size: 32pt;
+	text-align: center;
+	text-transform: uppercase; /* Because memes always yell */
+
+	/* Since outlines dont work in all browsers, we can fake them :D */
+	text-shadow: 3px 0 0 black,
+				 -3px 0 0 black,
+				 0 3px 0 black,
+				 0 -3px 0 black,
+				 3px 3px 0 black,
+				 -3px -3px 0 black,
+				 3px -3px 0 black,
+				 -3px 3px 0 black;
+
+
+	/* Posititioning */
+	padding: 2.5%;
+	width: 95%;
+	position: absolute;
+}
+
+#toptext {
+	/* Fix the top text at the very top */
+	top: 0;
+}
+
+#bottomtext {
+	/* Fix the bottom text at the very bottom */
+	bottom: 0;
+}
