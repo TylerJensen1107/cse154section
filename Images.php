@@ -10,7 +10,7 @@
     <div>
       
       <?php
-		$folder = "images";
+		$folder = "https://webster.cs.washington.edu/staff/tylerj11/cs154/cse154section/images";
 
 		$images = glob("$folder/*.jpg");
 
