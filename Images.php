@@ -14,9 +14,15 @@
 
 		$images = glob("$folder/*.jpg");
 
+		$regex = "/abbath/i";
+
 		foreach ($images as $path) {
-			?><img src="<?= $path ?>"  alt="some picture" />  
-		<?php }
+
+			if(preg_match($regex, $path)) {
+				?><img src="<?= $path ?>"  alt="some picture" />  
+		<?php
+			} 
+		}
 
 
 	?>
