@@ -14,12 +14,9 @@
 
 		$images = glob("$folder/*.jpg");
 
-		$regex = "/abbath/i";
-
-		foreach ($images as $path) {
-
-			if(preg_match($regex, $path)) {
-				?><img src="<?= $path ?>"  alt="some picture" />  
+		$randIndex = array_rand($images);
+			
+			?><img src="<?= $images[$randIndex] ?>"  alt="some picture" />  
 		<?php
 			} 
 		}
