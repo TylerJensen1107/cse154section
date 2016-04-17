@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    
+<script src="//use.typekit.net/aem3dbj.js"></script>
+<script>try{Typekit.load();}catch(e){}</script>
+
+
+
+
+<script src="/resources-prod/site.head-2acc75ce.js"></script>
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Firebase is a powerful platform for your mobile and web applications. Build cross-platform apps in minutes with our powerful platform. Firebase can power your app’s backend, user authentication, static hosting, and more. Focus on creating extraordinary experiences for your users, we’ll take care of the rest.">
+    <meta name="keywords" content="realtime, backend as a service, websockets, instant API, mobile database, Angular Bindings, Backbone Bindings, Ember Bindings, iOS plugins, Android plugins, javascript API, realtime sync, browser, mobile, no servers, build apps fast, servers optional, completely realtime, build collaborative apps, real-time, JSON data, First-class Security, Automatic Scaling, Real-time Synchronization, Data Accessibility, Free Sign Up, ">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="robots" content="all">
+
+    <!-- social media meta tags -->
+
+
+  <meta property="og:image" content="https://www.firebase.com/resources/images/website/share/firebase.png">
+  <meta itemprop="image" content="https://www.firebase.com/resources/images/website/share/firebase.png">
+
+
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:description" content="Firebase is a powerful platform for your mobile and web applications. Build cross-platform apps in minutes with our powerful platform. Firebase can power your app’s backend, user authentication, static hosting, and more. Focus on creating extraordinary experiences for your users, we’ll take care of the rest.">
+<meta property="og:title" content="Tutorial - Firebase">
+
+<meta itemprop="description" content="Firebase is a powerful platform for your mobile and web applications. Build cross-platform apps in minutes with our powerful platform. Firebase can power your app’s backend, user authentication, static hosting, and more. Focus on creating extraordinary experiences for your users, we’ll take care of the rest.">
+<meta itemprop="name" content="Tutorial - Firebase">
+
+    <script type="text/javascript">
+  (function(){
+    var isiPad = navigator.userAgent.match(/iPad/i) != null;
+
+    if(isiPad) {
+      //CHANGE VIEWPORT BACK TO DEFAULT FOR IPAD
+      var viewport = document.getElementById('viewport');
+      viewport.setAttribute('content', 'width=980, user-scalable=yes, minimum-scale=.25, maximum-scale=1.6 ');
+    }
+  })();
+</script>
+    <link rel="stylesheet" href="/resources-prod/site.head-4738def2.css">
+
+
+
+<link rel="stylesheet" type="text/css" href="//cloud.typography.com/6470674/767528/css/fonts.css" />
+
+
+
+<link rel="stylesheet" href="/resources-prod/tutorial.head-90f3f8fd.css">
+
+
+
+    
+      <title>Tutorial - Firebase</title>
+    
+  </head>
+
+  <body data-page-id="tutorial">
+    <div id="page-content">
+      <header class="nav nav-top">
+  <nav>
+    <h1><a href="/">Firebase</a></h1>
+
+    <a href="#" class="button-mobile-menu">Site Menu</a>
+
+    <ul class="text-medium" id="main-nav">
+      <li><a href="/signup/" id="nav-signup" class="button button-flat-primary button-rounded button-signup">Sign Up with Google</a></li>
+      <li><a id="nav-login" href="/login/" class="button button-flat-plain button-rounded button-login">Login</a></li>
+      <li><a href="/docs/" class=" button button-flat-plain button-rounded">Docs</a></li>
+      <li><a href="/pricing.html" class=" button button-flat-plain button-rounded">Pricing</a></li>
+      <li><a href="/features.html" class=" button button-flat-plain button-rounded">Features</a></li>
+      <li><a href="/" class=" button button-flat-plain button-rounded">Overview</a></li>
+    </ul>
+  </nav>
+</header>
+      <section class="content-block">
+  <div class="grid-fixed">
+
+    <div id="tutorialbody">
+
+      <div id="gettingstarteddiv">
+        <h3>This 5 minute tutorial will teach you the basics of Firebase.</h3>
+        <a id="beginButt" class="btn btn-big orange">Start Tutorial ></a>
+      </div>
+
+      <div id="loadingdiv" class="hide">
+        <div id="spinnerHolder">
+          <h3><img src="/resources/tutorial/images/ajax-loader.gif" id="spinnerImage" />Loading...</h3>
+        </div>
+      </div>
+
+      <div id="loadeddiv" class="hide">
+        <div id="tutorialbodyheader" class="clearfix">
+
+          <div id="lightHR" class="clearfix">
+            <h3 id="headertext" class="left">
+              <span id="lessonnumber"></span>
+              <span id="stepTitle"></span>
+            </h3>
+
+            <div id="progressWidget" class="hide">
+              <ul id="lessonnumbuttons">
+              </ul>
+            </div>
+
+            <div id="shareWidget">
+              Share your creation:
+              <a href="#" id="tweetButton" class="button button-flat-primary button-rounded button-tiny spacer-left-10 social-button">
+                <i class="icon-twitter2"></i> Tweet
+              </a>
+            </div>
+          </div>
+
+          <table id="fadeOutArea">
+            <tr>
+              <td width="69%">
+                <div id="instructions"></div>
+              </td>
+              <td width="31%" id="rightColumn" class="rightColumn" align="right">
+                <div id="advanceDiv" class="hide">
+                  <div id="errorText"></div>
+                  <a id="advanceButton" class="btn orange"></a>
+                </div>
+                <div id="examplesDiv" class="hide">
+                </div>
+              </td>
+            </tr>
+          </table>
+
+        </div>
+
+        <div id="editor"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+      <footer class="nav nav-launchpad">
+  <nav class="grid-fixed">
+    <section class="c3">
+      <h4 class="spacer-bottom-10">Product</h4>
+      <ul>
+        <li><a href="/blog/">Our Blog</a>
+        <li><a href="/customers/">Case Studies</a>
+        <li><a href="/pricing.html">Pricing</a>
+        <li><a target="_blank" href="http://status.firebase.com/">Uptime &amp; Status</a>
+      </ul>
+    </section>
+
+    <section class="c3">
+      <h4 class="spacer-bottom-10">Learn</h4>
+      <ul>
+        <li><a href="/tutorial/">Interactive Tutorial</a>
+        <li><a href="/docs/">Documentation</a>
+        <li><a href="/docs/web/quickstart.html">Web Quickstart</a>
+        <li><a href="/docs/ios/quickstart.html">iOS Quickstart</a>
+        <li><a href="/docs/android/quickstart.html">Android Quickstart</a>
+      </ul>
+    </section>
+
+    <section class="c3">
+      <h4 class="spacer-bottom-10">Company</h4>
+      <ul>
+        <li><a href="/about.html">About</a>
+        <li><a href="/docs/help/">Help &amp; Support</a>
+        <li><a href="/contact.html">Contact</a>
+        <li><a href="/jobs.html">Jobs</a>
+        <li><a href="/experts.html">Experts Program</a>
+      </ul>
+    </section>
+
+    <section class="c3">
+      <h4 class="spacer-bottom-10">Connect</h4>
+      <ul>
+        <li>
+          <iframe class="social-share" src="https://sandbox-tutorial.firebaseapp.com/social/twitter-firebase.html"></iframe>
+        </li>
+
+        <li>
+          <iframe class="social-share" src="https://sandbox-tutorial.firebaseapp.com/social/twitter-firebasestatus.html"></iframe>
+        </li>
+
+        <li>
+          <iframe class="social-share" src="https://sandbox-tutorial.firebaseapp.com/social/twitter-firebaserelease.html"></iframe>
+        </li>
+
+        <li>
+          <div class="g-follow" data-annotation="bubble" data-height="20" data-href="https://plus.google.com/115330003035930967645" data-rel="publisher"></div>
+        </li>
+
+        <li>
+          <iframe class="social-share" src="https://sandbox-tutorial.firebaseapp.com/social/facebook.html"></iframe>
+        </li>
+      </ul>
+    </section>
+    <div class="clear"></div>
+
+    <section class="copyright c12">
+      <small><h5><a href="/">Firebase</a></h5></small>
+      <ul>
+        <li><a href="/terms/privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="/terms/terms-of-service.html">Terms of Service</a></li>
+        <li><a href="/terms/service-level-agreement.html">Service Level Agreement</a></li>
+      </ul>
+
+    </section>
+    <div class="clear"></div>
+  </nav>
+</footer>
+
+    </div>
+
+    <!-- VENDOR SCRIPTS (w/o external deps) -->
+  <script src="/resources-prod/site.body.vendor-81859509.js"></script>
+
+
+
+  <!-- EXTERNAL SCRIPTS -->
+  
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','//connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '944069845652162');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=944069845652162&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Facebook Pixel Code -->
+  
+  <!-- Twitter Pixel Code -->
+  <script src="//platform.twitter.com/oct.js" type="text/javascript"></script>
+  <script type="text/javascript">twttr.conversion.trackPid('l6szm', { tw_sale_amount: 0, tw_order_quantity: 0 });</script>
+  <noscript>
+  <img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=l6szm&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
+  <img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=l6szm&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
+  </noscript>
+  <!-- End Twitter Pixel Code -->
+
+    <script src="/resources-prod/site.body.vendor_external-b2787d43.js"></script>
+
+
+
+<!-- APP SCRIPTS -->
+  <script src="/resources-prod/site.body.app-5e90830c.js"></script>
+
+  
+
+
+
+
+  <!-- TUTORIAL INCLUDE -->
+  <script src="/resources-prod/tutorial.body-f2e2de45.js"></script>
+
+
+
+<!-- INTERNET EXPLORER -->
+  <!--[if lt IE 10]><script src="/resources/bower/jQuery.XDomainRequest/jquery.xdomainrequest.min.js"></script><![endif]-->
+
+  </body>
+</html>

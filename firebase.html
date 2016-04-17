@@ -1,0 +1,28 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+<script>
+window.onload = function() {
+    fetchData();
+}
+
+// Called when the Fetch button is clicked.
+// Looks up XML data
+function fetchData() {
+    //var hw = parseInt(document.getElementById("assignment").value);
+    var ajax = new XMLHttpRequest();
+    ajax.onload = whyULate;
+    ajax.open("GET", "https://whispering-cliffs-46481.herokuapp.com/articles/1", true);
+    ajax.send();
+}
+
+// Process returned XML data to calculate how many students were late.
+function whyULate() {
+    console.log(this.responseText);
+}
+</script>
+</html>
